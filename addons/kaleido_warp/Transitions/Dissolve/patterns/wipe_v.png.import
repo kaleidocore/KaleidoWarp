@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rcqjssobofv7"
-path="res://.godot/imported/squares.png-efcb64dbfe8b1f71bd5030713003e989.ctex"
+uid="uid://c6d300kvy13we"
+path="res://.godot/imported/wipe_v.png-7cb03c0e38367bdf7fa118279151264e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/kaleido_warp/Transitions/Dissolve/textures/squares.png"
-dest_files=["res://.godot/imported/squares.png-efcb64dbfe8b1f71bd5030713003e989.ctex"]
+source_file="res://addons/kaleido_warp/Transitions/Dissolve/patterns/wipe_v.png"
+dest_files=["res://.godot/imported/wipe_v.png-7cb03c0e38367bdf7fa118279151264e.ctex"]
 
 [params]
 

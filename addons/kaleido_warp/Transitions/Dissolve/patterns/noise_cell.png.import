@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc1btvk5df8lj"
-path="res://.godot/imported/swirl.png-b7caf574cb4518dd5b461f14def02cf9.ctex"
+uid="uid://dbxbmeqi0xbiy"
+path="res://.godot/imported/noise_cell.png-e4472510bec12bf68e31aa6ef62a61cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/kaleido_warp/Transitions/Dissolve/textures/swirl.png"
-dest_files=["res://.godot/imported/swirl.png-b7caf574cb4518dd5b461f14def02cf9.ctex"]
+source_file="res://addons/kaleido_warp/Transitions/Dissolve/patterns/noise_cell.png"
+dest_files=["res://.godot/imported/noise_cell.png-e4472510bec12bf68e31aa6ef62a61cb.ctex"]
 
 [params]
 

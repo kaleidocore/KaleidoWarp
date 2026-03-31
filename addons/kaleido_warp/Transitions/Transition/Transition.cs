@@ -68,12 +68,16 @@ public abstract partial class Transition : ColorRect
 	/// </summary>
 	public virtual bool IsFinished => _tween?.IsRunning() == false;
 
+	public Transition()
+	{
+		Color = Colors.Black;
+	}
+
 	public override void _Ready()
 	{
 		base._Ready();
 
 		ProcessMode = ProcessModeEnum.Always;
-		Color = Colors.Black;
 		Size = GetViewportRect().Size;
 		SetAnchorsPreset(LayoutPreset.FullRect);
 		Visible = false;

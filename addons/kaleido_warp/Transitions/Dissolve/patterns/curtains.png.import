@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7aut60xptg82"
-path="res://.godot/imported/wipe_h.png-3f4cd47d36b95ec6289b23e4ba8933e7.ctex"
+uid="uid://bwmlsc56n2qjr"
+path="res://.godot/imported/curtains.png-184edb34dd0d5676ac4f0dae8d610a87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/kaleido_warp/Transitions/Dissolve/textures/wipe_h.png"
-dest_files=["res://.godot/imported/wipe_h.png-3f4cd47d36b95ec6289b23e4ba8933e7.ctex"]
+source_file="res://addons/kaleido_warp/Transitions/Dissolve/patterns/curtains.png"
+dest_files=["res://.godot/imported/curtains.png-184edb34dd0d5676ac4f0dae8d610a87.ctex"]
 
 [params]
 

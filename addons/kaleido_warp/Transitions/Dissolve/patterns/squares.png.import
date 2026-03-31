@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbxbmeqi0xbiy"
-path="res://.godot/imported/noise_cell.png-f788dd5139b3124655c7a1f0ee5aa035.ctex"
+uid="uid://rcqjssobofv7"
+path="res://.godot/imported/squares.png-8ab15e92b8f7fef6b345cec4380178e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/kaleido_warp/Transitions/Dissolve/textures/noise_cell.png"
-dest_files=["res://.godot/imported/noise_cell.png-f788dd5139b3124655c7a1f0ee5aa035.ctex"]
+source_file="res://addons/kaleido_warp/Transitions/Dissolve/patterns/squares.png"
+dest_files=["res://.godot/imported/squares.png-8ab15e92b8f7fef6b345cec4380178e0.ctex"]
 
 [params]
 

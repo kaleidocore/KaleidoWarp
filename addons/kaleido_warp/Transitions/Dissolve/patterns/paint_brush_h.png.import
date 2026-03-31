@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl6s1i5utgfp8"
-path="res://.godot/imported/noise_pixelated.png-38ba557500ec629ce5a0f5bb0eb0abde.ctex"
+uid="uid://dr661x4xo4pir"
+path="res://.godot/imported/paint_brush_h.png-9d743eeec7e2b92173678578e48af137.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/kaleido_warp/Transitions/Dissolve/textures/noise_pixelated.png"
-dest_files=["res://.godot/imported/noise_pixelated.png-38ba557500ec629ce5a0f5bb0eb0abde.ctex"]
+source_file="res://addons/kaleido_warp/Transitions/Dissolve/patterns/paint_brush_h.png"
+dest_files=["res://.godot/imported/paint_brush_h.png-9d743eeec7e2b92173678578e48af137.ctex"]
 
 [params]
 

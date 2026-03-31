@@ -17,7 +17,7 @@ public class DissolvePatterns
 
 	Texture2D Tex(string name)
 	{
-		var path = BasePath.PathJoin("textures").PathJoin($"{name}.png");
+		var path = BasePath.PathJoin("patterns").PathJoin($"{name}.png");
 		return GD.Load<Texture2D>(path);
 	}
 

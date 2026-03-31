@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu4wxwraumhh7"
-path="res://.godot/imported/square.png-c313165a5be8adf83091233d3d5e34d8.ctex"
+uid="uid://bxct4kmbbxpbv"
+path="res://.godot/imported/circle.png-52d7ff6cabbb2283e6f0c1893046dd63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/kaleido_warp/Transitions/Dissolve/textures/square.png"
-dest_files=["res://.godot/imported/square.png-c313165a5be8adf83091233d3d5e34d8.ctex"]
+source_file="res://addons/kaleido_warp/Transitions/Dissolve/patterns/circle.png"
+dest_files=["res://.godot/imported/circle.png-52d7ff6cabbb2283e6f0c1893046dd63.ctex"]
 
 [params]
 

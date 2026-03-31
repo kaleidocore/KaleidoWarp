@@ -42,7 +42,7 @@ public partial class Dissolve : Transition
 	/// The feathering amount for the dissolve effect, controlling the softness of the transition edges.
 	/// </summary>
 	[Export]
-	public float Feather { get; set; } = .1f;
+	public float Feather { get; set; } = .01f;
 
 	/// <summary>
 	/// A function that selects the dissolve texture from the available patterns.

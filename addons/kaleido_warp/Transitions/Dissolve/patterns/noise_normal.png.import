@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ryd3jymcn1oc"
-path="res://.godot/imported/conical.png-678f2e284fae2c1489f4612c2d07247c.ctex"
+uid="uid://cnpef0pl8s1ja"
+path="res://.godot/imported/noise_normal.png-967c1c60c58a021c35525c6983bb765f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/kaleido_warp/Transitions/Dissolve/textures/conical.png"
-dest_files=["res://.godot/imported/conical.png-678f2e284fae2c1489f4612c2d07247c.ctex"]
+source_file="res://addons/kaleido_warp/Transitions/Dissolve/patterns/noise_normal.png"
+dest_files=["res://.godot/imported/noise_normal.png-967c1c60c58a021c35525c6983bb765f.ctex"]
 
 [params]
 

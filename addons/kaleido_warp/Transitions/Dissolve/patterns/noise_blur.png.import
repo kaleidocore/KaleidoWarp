@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl2mfa1bj3mjf"
-path="res://.godot/imported/scribbles.png-fc2356c8f61f46ae226c7fb628483767.ctex"
+uid="uid://bcwcaxbkay0lq"
+path="res://.godot/imported/noise_blur.png-b7de130727f1e6eba1efeae4690fd79b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/kaleido_warp/Transitions/Dissolve/textures/scribbles.png"
-dest_files=["res://.godot/imported/scribbles.png-fc2356c8f61f46ae226c7fb628483767.ctex"]
+source_file="res://addons/kaleido_warp/Transitions/Dissolve/patterns/noise_blur.png"
+dest_files=["res://.godot/imported/noise_blur.png-b7de130727f1e6eba1efeae4690fd79b.ctex"]
 
 [params]
 

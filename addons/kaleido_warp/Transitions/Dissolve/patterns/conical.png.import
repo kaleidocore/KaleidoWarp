@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkwlruhev2vjh"
-path="res://.godot/imported/tile_reveal.png-06bd8cdc719dad3b414527fb86dbe9ad.ctex"
+uid="uid://ryd3jymcn1oc"
+path="res://.godot/imported/conical.png-008697a9832cbf7c3f52b1f16d73e7ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/kaleido_warp/Transitions/Dissolve/textures/tile_reveal.png"
-dest_files=["res://.godot/imported/tile_reveal.png-06bd8cdc719dad3b414527fb86dbe9ad.ctex"]
+source_file="res://addons/kaleido_warp/Transitions/Dissolve/patterns/conical.png"
+dest_files=["res://.godot/imported/conical.png-008697a9832cbf7c3f52b1f16d73e7ae.ctex"]
 
 [params]
 

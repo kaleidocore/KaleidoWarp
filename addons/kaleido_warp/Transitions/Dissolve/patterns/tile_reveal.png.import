@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnpef0pl8s1ja"
-path="res://.godot/imported/noise_normal.png-ba790d57402aba7805b7b7191a4c5e64.ctex"
+uid="uid://bkwlruhev2vjh"
+path="res://.godot/imported/tile_reveal.png-7aa7a586e2a09cdecf83f735b1f218ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/kaleido_warp/Transitions/Dissolve/textures/noise_normal.png"
-dest_files=["res://.godot/imported/noise_normal.png-ba790d57402aba7805b7b7191a4c5e64.ctex"]
+source_file="res://addons/kaleido_warp/Transitions/Dissolve/patterns/tile_reveal.png"
+dest_files=["res://.godot/imported/tile_reveal.png-7aa7a586e2a09cdecf83f735b1f218ba.ctex"]
 
 [params]
 
