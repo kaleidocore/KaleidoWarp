@@ -120,3 +120,14 @@ offset_right = 1407.0
 offset_bottom = 677.84314
 theme_override_font_sizes/font_size = 50
 text = "Color"
+
+[node name="BuildNote" type="Label" parent="." unique_id=1862488798]
+offset_left = 45.0
+offset_top = 1162.0
+offset_right = 1781.5
+offset_bottom = 1299.0001
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Plugin load error? Just build the Godot project first!"
+horizontal_alignment = 1
+vertical_alignment = 1

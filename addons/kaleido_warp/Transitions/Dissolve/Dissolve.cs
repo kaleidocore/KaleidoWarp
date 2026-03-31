@@ -90,6 +90,7 @@ public partial class Dissolve : Transition
 		{
 			Duration = duration,
 			Reverse = false,
+			TransitionType = Tween.TransitionType.Linear,
 		};
 	}
 
@@ -105,6 +106,7 @@ public partial class Dissolve : Transition
 			Duration = duration,
 			Invert = true,
 			Reverse = true,
+			TransitionType = Tween.TransitionType.Linear,
 		};
 	}
 
