@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://snaue18x3gik"]
+[gd_scene format=3 uid="uid://c42xdi8oksteq"]
 
-[ext_resource type="PackedScene" uid="uid://b134caryb0sib" path="res://Autoloads/WarpManager/Transitions/Transition.tscn" id="1_i84wu"]
-[ext_resource type="Script" uid="uid://bh46bdcs5atbr" path="res://Autoloads/WarpManager/Transitions/SuperMario/SuperMario.cs" id="1_veq07"]
+[ext_resource type="PackedScene" uid="uid://b134caryb0sib" path="res://addons/kaleido_warp/Transitions/Transition/Transition.tscn" id="1_i84wu"]
+[ext_resource type="Script" uid="uid://bh46bdcs5atbr" path="res://addons/kaleido_warp/Transitions/SuperMario/SuperMario.cs" id="1_veq07"]
 
-[node name="SuperMario" unique_id=1005727631 instance=ExtResource("1_i84wu")]
+[node name="SuperMario" unique_id=81335194 instance=ExtResource("1_i84wu")]
 script = ExtResource("1_veq07")
