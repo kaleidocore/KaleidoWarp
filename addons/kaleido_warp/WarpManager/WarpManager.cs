@@ -33,12 +33,6 @@ public partial class WarpManager : CanvasLayer
 	Action? _queue;
 
 	/// <summary>
-	/// Gets or sets the Z-index (layer) value that determines the rendering order of transitions above other elements. Higher values are rendered on top of lower values. See <see cref="CanvasLayer.Layer"/> for more details.
-	/// </summary>
-	[Export]
-	public int ZIndex { get; set; } = 1000;
-
-	/// <summary>
 	/// Gets a value indicating whether the current instance is actively processing a transition.
 	/// </summary>
 	public bool IsBusy => _queue != null || _state != WarpState.Finished;
@@ -46,7 +40,6 @@ public partial class WarpManager : CanvasLayer
 	public override void _Ready()
 	{
 		_instance = this;
-		Layer = ZIndex;
 	}
 
 	public override void _Process(double delta)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://olqbotb4ollr"]
 
-[ext_resource type="Script" uid="uid://8ng1n1k5k2jo" path="res://Autoloads/WarpManager/WarpManager.cs" id="1_kqg5i"]
+[ext_resource type="Script" uid="uid://8ng1n1k5k2jo" path="res://addons/kaleido_warp/WarpManager/WarpManager.cs" id="1_kqg5i"]
 
 [node name="WarpManager" type="CanvasLayer" unique_id=1838711624]
+layer = 1000
 script = ExtResource("1_kqg5i")
