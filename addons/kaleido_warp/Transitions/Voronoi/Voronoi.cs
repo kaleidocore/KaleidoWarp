@@ -34,8 +34,9 @@ public partial class Voronoi : Transition
 	{
 		base._Process(delta);
 		var material = (ShaderMaterial)Material;
-		material.SetShaderParameter("image", ImageTexture ?? TransparentPixel);
 		material.SetShaderParameter("progress", Reverse ? 1.0 - Progress : Progress);
+		material.SetShaderParameter("image", ImageTexture ?? TransparentPixel);
+		material.SetShaderParameter("image_fit", (int)ImageFitMode);
 		material.SetShaderParameter("angle", Mathf.DegToRad(Angle));
 	}
 

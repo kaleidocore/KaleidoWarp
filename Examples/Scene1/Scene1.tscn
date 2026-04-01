@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://fg161ybw2vio"]
 
 [ext_resource type="Script" uid="uid://boa6oq0tojsha" path="res://Examples/Scene1/Scene1.cs" id="1_ok3yg"]
-[ext_resource type="Texture2D" uid="uid://c4fonxi2sxc4n" path="res://icon.svg" id="2_6nhwj"]
+[ext_resource type="Texture2D" uid="uid://dbq2u3eo6ucfg" path="res://Examples/Scene1/overlay_image.png" id="2_rjg6l"]
 
 [node name="Scene1" type="Node2D" unique_id=365395555]
 script = ExtResource("1_ok3yg")
@@ -108,9 +108,9 @@ text = "Image"
 
 [node name="OverlayImage" type="Sprite2D" parent="UI" unique_id=1792539118]
 unique_name_in_owner = true
-position = Vector2(1571.9999, 604.84314)
-scale = Vector2(1.3764896, 1.1069243)
-texture = ExtResource("2_6nhwj")
+position = Vector2(1588, 601)
+scale = Vector2(0.13183582, 0.13183582)
+texture = ExtResource("2_rjg6l")
 
 [node name="ColorPicker" type="ColorPickerButton" parent="UI" unique_id=1575690471]
 unique_name_in_owner = true

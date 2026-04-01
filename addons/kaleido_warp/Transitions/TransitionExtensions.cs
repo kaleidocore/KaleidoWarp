@@ -43,9 +43,9 @@ public static class TransitionExtensions
 	/// <param name="transition">The transition instance to which the image will be applied.</param>
 	/// <param name="imagePath">The path to the image resource file to apply to the transition.</param>
 	/// <returns>The modified transition instance with the updated image.</returns>
-	public static T Image<T>(this T transition, string imagePath)
+	public static T Image<T>(this T transition, string imagePath, ImageFit fit = ImageFit.None)
 		where T : Transition
-		=> Image(transition, GD.Load<Texture2D>(imagePath));
+		=> Image(transition, GD.Load<Texture2D>(imagePath), fit);
 
 	/// <summary>
 	/// An optional <see cref="Texture2D"/> image to use for the transition, effectively rendered above the base color.
@@ -54,10 +54,11 @@ public static class TransitionExtensions
 	/// <param name="transition">The transition instance to which the image will be applied.</param>
 	/// <param name="image">The image to apply to the transition.</param>
 	/// <returns>The modified transition instance with the updated image.</returns>
-	public static T Image<T>(this T transition, Texture2D image)
+	public static T Image<T>(this T transition, Texture2D image, ImageFit fit = ImageFit.None)
 		where T : Transition
 	{
 		transition.ImageTexture = image;
+		transition.ImageFitMode = fit;
 		return transition;
 	}
 

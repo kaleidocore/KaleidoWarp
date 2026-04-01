@@ -67,12 +67,13 @@ public partial class Dissolve : Transition
 		base._Process(delta);
 		var material = (ShaderMaterial)Material;
 
+		material.SetShaderParameter("progress", Reverse ? Progress : 1.0 - Progress);
 		material.SetShaderParameter("image", ImageTexture ?? TransparentPixel);
+		material.SetShaderParameter("image_fit", (int)ImageFitMode);
 
 		if (DissolveTexture != null)
 			material.SetShaderParameter("dissolve_texture", DissolveTexture);
 
-		material.SetShaderParameter("progress", Reverse ? Progress : 1.0 - Progress);
 		material.SetShaderParameter("flip_x", FlipX);
 		material.SetShaderParameter("flip_y", FlipY);
 		material.SetShaderParameter("invert", !Invert);
