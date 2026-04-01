@@ -3,6 +3,14 @@ using Godot;
 
 namespace KaleidoWarp;
 
+public enum ImageFit
+{
+	None,
+	Contain,
+	Cover,
+	Stretch
+}
+
 /// <summary>
 /// The base class for all transitions. Provides common properties and functionality for managing transition progress, duration, and appearance. Specific transition types can inherit from this class and implement their own visual effects based on the Progress property.
 /// </summary>
@@ -58,6 +66,9 @@ public abstract partial class Transition : ColorRect
 	[Export]
 	public Texture2D? ImageTexture { get; set; }
 
+	[Export]
+	public ImageFit ImageFitMode { get; set; } = ImageFit.Stretch;
+
 	/// <summary>
 	/// The path of the directory containing the transition script, used for loading related resources such as shaders or textures. This is automatically set in the _Ready method based on the script's resource path.
 	/// </summary>
@@ -68,7 +79,7 @@ public abstract partial class Transition : ColorRect
 	/// </summary>
 	public virtual bool IsFinished => _tween?.IsRunning() == false;
 
-	public Transition()
+	protected Transition()
 	{
 		Color = Colors.Black;
 	}

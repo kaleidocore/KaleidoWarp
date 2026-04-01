@@ -170,15 +170,15 @@ public partial class WarpManager : CanvasLayer
 	/// Queues a transition to the specified packed scene, optionally applying transition effects when leaving the current scene and entering the new one.
 	/// </summary>
 	/// <remarks>This is a deferred operation, even if no transition effects are specified.</remarks>
-	/// <param name="scene">The packed scene to transition to. Must be a valid, non-null packed scene.</param>
+	/// <param name="packedScene">The packed scene to transition to. Must be a valid, non-null packed scene.</param>
 	/// <param name="transitionOut">An optional transition effect to apply when leaving the current scene. If null, no transition is applied.</param>
 	/// <param name="transitionIn">An optional transition effect to apply when entering the new scene. If null, no transition is applied.</param>
-	public void WarpToPacked(PackedScene scene, Transition? transitionOut, Transition? transitionIn)
+	public void WarpToPacked(PackedScene packedScene, Transition? transitionOut, Transition? transitionIn)
 	{
 		_queue = () =>
 		{
 			InitWarp(transitionOut, transitionIn);
-			_targetPacked = scene;
+			_targetPacked = packedScene;
 			_queue = null;
 		};
 	}
@@ -187,15 +187,15 @@ public partial class WarpManager : CanvasLayer
 	/// Queues a transition to the specified node, optionally applying transition effects when leaving the current scene and entering the new one.
 	/// </summary>
 	/// <remarks>This is a deferred operation, even if no transition effects are specified.</remarks>
-	/// <param name="scene">The node to transition to. Must be a valid, non-null node.</param>
+	/// <param name="sceneNode">The node to transition to. Must be a valid, non-null node.</param>
 	/// <param name="transitionOut">An optional transition effect to apply when leaving the current scene. If null, no transition is applied.</param>
 	/// <param name="transitionIn">An optional transition effect to apply when entering the new scene. If null, no transition is applied.</param>
-	public void WarpToNode(Node scene, Transition? transitionOut, Transition? transitionIn)
+	public void WarpToNode(Node sceneNode, Transition? transitionOut, Transition? transitionIn)
 	{
 		_queue = () =>
 		{
 			InitWarp(transitionOut, transitionIn);
-			_targetNode = scene;
+			_targetNode = sceneNode;
 			_queue = null;
 		};
 	}

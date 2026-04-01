@@ -15,6 +15,20 @@ public static class TransitionExtensions
 	/// <param name="transition">The transition instance to which the color will be applied.</param>
 	/// <param name="color">The color to apply to the transition.</param>
 	/// <returns>The modified transition instance with the updated color.</returns>
+	public static T Duration<T>(this T transition, float duration)
+		where T : Transition
+	{
+		transition.Duration = duration;
+		return transition;
+	}
+
+	/// <summary>
+	/// The base color to use for the transition.
+	/// </summary>
+	/// <typeparam name="T">The type of the transition. Must inherit from the Transition class.</typeparam>
+	/// <param name="transition">The transition instance to which the color will be applied.</param>
+	/// <param name="color">The color to apply to the transition.</param>
+	/// <returns>The modified transition instance with the updated color.</returns>
 	public static T Color<T>(this T transition, Color color)
 		where T : Transition
 	{
@@ -23,7 +37,18 @@ public static class TransitionExtensions
 	}
 
 	/// <summary>
-	/// An optional image texture to use for the transition, effectively rendered above the base color.
+	/// An optional texture resource file to use for the transition, effectively rendered above the base color.
+	/// </summary>
+	/// <typeparam name="T">The type of the transition. Must inherit from the Transition class.</typeparam>
+	/// <param name="transition">The transition instance to which the image will be applied.</param>
+	/// <param name="imagePath">The path to the image resource file to apply to the transition.</param>
+	/// <returns>The modified transition instance with the updated image.</returns>
+	public static T Image<T>(this T transition, string imagePath)
+		where T : Transition
+		=> Image(transition, GD.Load<Texture2D>(imagePath));
+
+	/// <summary>
+	/// An optional <see cref="Texture2D"/> image to use for the transition, effectively rendered above the base color.
 	/// </summary>
 	/// <typeparam name="T">The type of the transition. Must inherit from the Transition class.</typeparam>
 	/// <param name="transition">The transition instance to which the image will be applied.</param>
