@@ -12,11 +12,11 @@ a) Just install the addon via the Godot Asset Library from inside Godot.
 
 _or_
 
-b) Clone the repo locally via Github Desktop or CLI, then copy (merge) the `addons/` folder into your project folder.
+b) Download the [latest relase](./releases) as a .zip, extract it anywhere, then copy (merge) the `addons/` folder into your project folder.
 
 _or_
 
-c) Download the repo as a .zip, extract anywhere,  then copy (merge) the `addons/` folder into your project folder.
+c) Clone the repo locally via Github Desktop or CLI, then copy (merge) the `addons/` folder into your project folder.
 
 Important:
 > After installation, make sure the KaleidoWarp plugin is enabled in the project settings. You might have to build the Godot project at least once before Godot can activate the plugin.
