@@ -104,6 +104,7 @@ This is a basic fade-in/fade-out transition.
 
 The `ColorFade` transition does not add any additional properties beyond the base `Transition` API.
 
+Examples:
 ```csharp
 // Fade screen to green over 2 seconds
 ColorFade.Cover(2f).Color(Colors.Green);
@@ -128,7 +129,7 @@ transition
     .Angle(0); // The sweep angle across the screen, default 0 (left to right)
 ```
 
-Example:
+Examples:
 ```csharp
 // A blue sweep from top-left to bottom-right
 Voronoi.Cover(2f).Color(Colors.Blue).Angle(45);
@@ -148,7 +149,7 @@ transition
     .Origin(new Vector2(0.5f, 0.5f));     // The effect origin in normalized screen coords, i.e. the "zoom position"
 ```
 
-Example:
+Examples:
 ```csharp
 // Pixellate with a factor of 200x and fade to black
 Pixellate.Cover(5f).Amount(200f);
@@ -172,13 +173,19 @@ transition
     .Feather(0.01f);            // Sets the feathering amount for the dissolve effect, enabling smoother or sharper transitions at the dissolve edge.
 ```
 
-Example using the default patterns:
+Examples:
 ```csharp
-// Exit the scene using a red circle shape that shrinks from the screen edges and inwards, finally displaying my_overlay.png.
-Dissolve.Cover(2f).Color(Colors.Red).Image("res://my_overlay.png").Pattern(p => p.Circle);
+// Exit the scene using the default shrinking circle shape
+Dissolve.Cover(2f).Pattern(p => p.Circle);
 
 // Reveal the new scene, but start from the center and grow outwards
-Dissolve.Uncover(2f).Color(Colors.Red).Image("res://my_overlay.png").Pattern(p => p.Circle).Invert();
+Dissolve.Uncover(2f).Pattern(p => p.Circle).Invert();
+
+// Exit the scene using a custom pattern, in red
+Dissolve.Cover(2f).Color(Colors.Red).Pattern("res://dissolve1.png);
+
+// Reveal the new scene, using a different custom pattern
+Dissolve.Uncover(2f).Color(Colors.Red).Pattern("res://dissolve2.png);
 ```
 
 ## Custom loaders
