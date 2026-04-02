@@ -41,7 +41,7 @@ WarpManager.Instance.WarpToFile(
 );
 ```
 
-Further examples can also be found and previewed in the example scenes.
+Further examples can be found and previewed in the example scenes.
 
 ## WarpManager API
 
