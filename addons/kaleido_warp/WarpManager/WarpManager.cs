@@ -2,6 +2,7 @@ using System;
 using Godot;
 
 namespace KaleidoWarp;
+#nullable enable
 
 /// <summary>
 /// A manager for handling scene transitions (warps) with customizable exit and entry effects. It supports warping to new scenes specified by file path, PackedScene, or directly to a Node instance. The WarpManager manages the transition states and ensures that the appropriate transition effects are played during scene changes. It also provides functionality to abort or cancel ongoing warps, allowing for flexible control over the transition process.

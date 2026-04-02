@@ -2,6 +2,7 @@ using System;
 using Godot;
 
 namespace KaleidoWarp;
+#nullable enable
 
 /// <summary>
 /// Represents a transition effect that gradually dissolves an image using a specified texture pattern.

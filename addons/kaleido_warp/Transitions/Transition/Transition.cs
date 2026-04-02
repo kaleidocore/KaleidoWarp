@@ -2,6 +2,7 @@ using System;
 using Godot;
 
 namespace KaleidoWarp;
+#nullable enable
 
 public enum ImageFit
 {
