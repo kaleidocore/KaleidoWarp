@@ -1,8 +1,27 @@
-# KaleidoWarp for Godot
+# 🎬 KaleidoWarp for Godot
 
 A flexible and extensible scene transition addon for Godot (.NET/C#) that allows for smooth, animated transitions between scenes.
 
-## Minimal Example
+## Installation 📦
+You have three options:
+
+
+a) Just install the addon via the Godot Asset Library from inside Godot.
+
+_or_
+
+b) Clone the repo locally via Github Desktop or CLI, then copy (merge) the `addons/` folder into your project folder.
+
+_or_
+
+c) Download the repo as a .zip, extract anywhere,  then copy (merge) the `addons/` folder into your project folder.
+
+Important:
+> After installation, make sure the KaleidoWarp plugin is enabled in the project settings. You might have to build the Godot project at least once before Godot can activate the plugin.
+
+## Examples 📜
+
+A minimal one-liner:
 ```csharp
 using KaleidoWarp;
 
@@ -20,36 +39,34 @@ WarpManager.Instance.WarpToFile(
 );
 ```
 
----
+Further examples can also be found and previewed in the example scenes.
 
 ## WarpManager API
 
-The primary API mirrors Godot's default scene navigation while adding optional transitions:
+The primary API of the `WarpManager` class mirrors Godot's default scene navigation while adding optional transitions:
 ```csharp
 public void WarpToFile(string scenePath, Transition? transitionOut, Transition? transitionIn)
 public void WarpToPacked(PackedScene packedScene, Transition? transitionOut, Transition? transitionIn)
 public void WarpToNode(Node sceneNode, Transition? transitionOut, Transition? transitionIn)
 ```
 
----
 
 ## Transitions
 
-The addon comes with 4 built-in, shader based transition types, each individually configurable:
+The addon comes with 4 built-in, shader based transition styles, each individually configurable:
 
-| Transition | Description |
+| Transition class | Description |
 |------------|-------------|
 | `(Transition)` | Abstract base class for transitions |
-| `ColorFade` | Fades the screen to an opaque overlay |
+| `ColorFade` | A basic screen fade |
 | `Voronoi` | A randomized bubbly pattern that sweeps across the screen at a given angle |
 | `Pixellation` | A pixellating effect reminiscent of the classic Super Mario pixel fade |
-| `Dissolve` | Uses a monochrome pattern texture to define when and where each screen pixel is overlaid and blended |
+| `Dissolve` | Uses a grayscale pattern texture to define when and where each screen pixel is overlaid and blended |
 
-Should these somehow not cover your needs you are free to implement your own custom transition inherited from `Transition`, which handles most the groundwork. And don't forget to share!
+Should these somehow not cover your needs you are free to implement your own custom transitions inherited from `Transition` (`Transition.tscn`), which handles most of the groundwork. And don't forget to share them here!
 
----
 
-## Defining Transitions
+## Configuring Transitions 🎭
 
 All transition implement the following two static factory methods:
 
@@ -61,11 +78,10 @@ public static T Cover(float duration);
 public static T Uncover(float duration);
 ```
 
-The factories are primarily for convencience and the main difference is that the uncovering transitions are setup to play in reverse.
+The factories are primarily for convencience and the main difference betweem `Cover()` and `Uncover()` is that the latter sets the transition up to play in reverse.
+You can mix and match transition styles for outro/intro however you like - as long as both of them have the same color and image they should overlap seamlessly.
 
----
-
-## Transition API
+## Transition common base API
 
 All transitions inherit from the abstract base class `Transition` and expose a fluent configuration API:
 ```csharp
@@ -83,6 +99,8 @@ transition
 ---
 
 ## ColorFade transition
+
+This is a basic fade-in/fade-out transition.
 
 The `ColorFade` transition does not add any additional properties beyond the base `Transition` API.
 
@@ -102,6 +120,8 @@ ColorFade.Uncover(3f).Color(Colors.Red).Image("res://my_overlay.png");
 
 ## Voronoi transition
 
+This is a randomly generated, bubbly pattern of the color/image overlay that sweep across the screen.
+
 The `Voronoi` transition adds the following properties:
 ```csharp
 transition
@@ -113,12 +133,13 @@ Example:
 // A blue sweep from top-left to bottom-right
 Voronoi.Cover(2f).Color(Colors.Blue).Angle(45);
 
-// An image sweep, from left to right but for an entry transition. Note that intro transitions simply play in reverse.
+// An image sweep, from left to right but for an entry transition.
 ColorFade.Uncover(2f).Image("res://my_overlay.png", FitMode.Stretch).Angle(180);
-
 ```
 
 ## Pixellation transition
+
+This pixellates the scene gradually, eventually fading out to the color/image overlay.
 
 The `Pixellation` transition adds the following properties:
 ```csharp
@@ -134,12 +155,11 @@ Pixellate.Cover(5f).Amount(200f);
 
 // Reveal the new scene, less blocky and from bottom-right
 Pixellate.Uncover(3f).Amount(70f).Origin(new(1,1));
-
 ```
 
 ## Dissolve transition
 
-`Dissolve` transitions enable transition animations through the use of dissolve textures. A dissolve texture is just a grayscale image that the shader will sample from and use as a mask when rendering the transition color/image overlay. It starts with the dissolve color threshold set to fully black, gradually increasing it to fully white across the transition duration. At any given point in time, transition overlay pixels will only be drawn if the corresponding pixel in the dissolve texture is below the current threshold. This can effectively create infinite variations of transition animations.
+Dissolve transitions enable transition animations through the use of dissolve textures. A dissolve texture is just a grayscale image that the shader will sample from and use as a mask when rendering the transition color/image overlay. It starts with the dissolve color threshold set to fully black, gradually increasing it to fully white across the transition duration. At any given point in time, transition overlay pixels will only be drawn if the corresponding pixel in the dissolve texture is below the current threshold. This can effectively create infinite variations of transition animations.
 The addon ships with a bunch of default dissolve textures (mostly stolen from [http://github.com/sempitern0](https://github.com/sempitern0/warp)) and made accessible via the DissolvePattern class, but you can also provide your own.
 
 The `Dissolve` transition adds the following properties:
@@ -150,7 +170,6 @@ transition
     .FlipX()                    // Flips the X coords of the dissolve texture, creating a mirrored effect along the horizontal axis of the dissolve animation.
     .FlipY()                    // Flips the Y coords of the dissolve texture, creating a mirrored effect along the vertical axis of the dissolve animation.
     .Feather(0.01f);            // Sets the feathering amount for the dissolve effect, enabling smoother or sharper transitions at the dissolve edge.
-
 ```
 
 Example using the default patterns:
@@ -160,6 +179,7 @@ Dissolve.Cover(2f).Color(Colors.Red).Image("res://my_overlay.png").Pattern(p => 
 
 // Reveal the new scene, but start from the center and grow outwards
 Dissolve.Uncover(2f).Color(Colors.Red).Image("res://my_overlay.png").Pattern(p => p.Circle).Invert();
-
 ```
 
+## Custom loaders
+For smooth loading of heavy scenes you may want to create a custom loader. However, under this framework loader scenes are nothing special - just transition (warp) to your loader scene normally, load your target scene however you want and transition (warp) to it when ready.
