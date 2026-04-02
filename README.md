@@ -123,7 +123,7 @@ ColorFade.Uncover(3f).Color(Colors.Red).Image("res://my_overlay.png");
 
 ## Voronoi transition
 
-This is a randomly generated, bubbly pattern of the color/image overlay that sweep across the screen.
+This is a randomly generated, bubbly pattern of the color/image overlay that sweeps across the screen.
 
 The `Voronoi` transition adds the following properties:
 ```csharp
