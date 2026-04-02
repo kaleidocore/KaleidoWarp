@@ -2,6 +2,8 @@
 
 This is a flexible and extensible scene transition addon for Godot (.NET/C#) that allows for smooth, animated transitions between scenes.
 
+![preview](./raw/preview_640x360.gif)
+
 ## Installation 📦
 You have three options:
 
