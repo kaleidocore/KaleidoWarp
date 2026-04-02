@@ -184,10 +184,10 @@ Dissolve.Cover(2f).Pattern(p => p.Circle);
 Dissolve.Uncover(2f).Pattern(p => p.Circle).Invert();
 
 // Exit the scene using a custom pattern, in red
-Dissolve.Cover(2f).Color(Colors.Red).Pattern("res://dissolve1.png);
+Dissolve.Cover(2f).Color(Colors.Red).Pattern("res://dissolve1.png");
 
 // Reveal the new scene, using a different custom pattern
-Dissolve.Uncover(2f).Color(Colors.Red).Pattern("res://dissolve2.png);
+Dissolve.Uncover(2f).Color(Colors.Red).Pattern("res://dissolve2.png");
 ```
 
 ## Custom loaders
