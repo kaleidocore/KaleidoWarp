@@ -3,16 +3,25 @@ using System.Linq;
 using Godot;
 using KaleidoWarp;
 
+/// <summary>
+/// This class demonstrate a simple UI with warps to other scenes
+/// </summary>
 public partial class Scene1 : Node2D
 {
+	// Example target scenes
 	static PackedScene TargetScene { get; } = GD.Load<PackedScene>("res://Examples/Scene2/Scene2.tscn");
 	static PackedScene LoaderScene { get; } = GD.Load<PackedScene>("res://Examples/Loader/Loader.tscn");
+
+	// Store UI values
 	static Color OverlayColor { get; set; } = Colors.Black;
 	static bool UseImage { get; set; } = false;
 	static int DissolvePatternIndex { get; set; } = 0;
 
+	// Simple timer to show we are running
 	float _timer;
 	Label TimeLabel => GetNode<Label>("%TimeLabel");
+
+	// UI buttons
 	Button ColorFadeButton => GetNode<Button>("%ColorFadeButton");
 	Button DissolveButton => GetNode<Button>("%DissolveButton");
 	OptionButton DissolveOptionButton => GetNode<OptionButton>("%DissolveOptionButton");
@@ -21,6 +30,8 @@ public partial class Scene1 : Node2D
 	Button LoaderButton => GetNode<Button>("%LoaderButton");
 	ColorPickerButton ColorPicker => GetNode<ColorPickerButton>("%ColorPicker");
 	CheckButton UseImageButton => GetNode<CheckButton>("%UseImage");
+
+	// UI helpers
 	Texture2D OverlayImage => UseImage ? GetNode<Sprite2D>("%OverlayImage").Texture : Transition.TransparentPixel;
 	Texture2D[] DissolveTextures { get; set; } = [];
 	Texture2D SelectedDissolveTexture => DissolveTextures[DissolvePatternIndex];
@@ -44,7 +55,7 @@ public partial class Scene1 : Node2D
 		VoronoiButton.Pressed += () => WarpManager.Instance.WarpToPacked(TargetScene, Voronoi.Cover().Color(OverlayColor).Image(OverlayImage), Voronoi.Uncover().Color(OverlayColor).Image(OverlayImage));
 		PixellateButton.Pressed += () => WarpManager.Instance.WarpToPacked(TargetScene, Pixellate.Cover().Color(OverlayColor).Image(OverlayImage), Pixellate.Uncover().Color(OverlayColor).Image(OverlayImage));
 		DissolveButton.Pressed += () => WarpManager.Instance.WarpToPacked(TargetScene, Dissolve.Cover().Color(OverlayColor).Image(OverlayImage).Pattern(SelectedDissolveTexture), Dissolve.Uncover().Color(OverlayColor).Image(OverlayImage).Pattern(SelectedDissolveTexture));
-		LoaderButton.Pressed += () => WarpManager.Instance.WarpToPacked(LoaderScene, Dissolve.Cover(1f).Color(Colors.Black).Pattern(p => p.TileReveal), null);
+		LoaderButton.Pressed += () => WarpManager.Instance.WarpToPacked(LoaderScene, Dissolve.Cover(1f).Pattern(p => p.TileReveal), null);
 	}
 
 	public override void _Process(double delta)
@@ -55,7 +66,7 @@ public partial class Scene1 : Node2D
 
 	void PrepareDropdown()
 	{
-		// Load and populate dropdown with default textures for demo purpose.
+		// Load and populate the dropdown with default textures for demo purposes.
 		const string dir = "res://addons/kaleido_warp/Transitions/Dissolve/patterns";
 		DissolveTextures = [.. DirAccess.GetFilesAt(dir).Where(f => f.EndsWith(".png")).Select(f => GD.Load<Texture2D>(dir.PathJoin(f)))];
 
