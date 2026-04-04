@@ -12,7 +12,7 @@ a) Just install the addon via the Godot Asset Library from inside Godot.
 
 _or_
 
-b) Download the [latest release](https://github.com/kaleidocore/KaleidoWarp/releases) as a .zip, extract it anywhere, then copy the `addons/kaleido_warp` folder into your project's `addons/` folder.
+b) Download the [latest release](https://github.com/kaleidocore/KaleidoWarp/releases) as a .zip or grab it from the [Godot Asset Library](https://godotengine.org/asset-library/asset?filter=kaleidowarp), extract it anywhere, then copy the `addons/kaleido_warp` folder into your project's `addons/` folder.
 
 _or_
 
