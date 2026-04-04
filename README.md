@@ -140,7 +140,7 @@ Voronoi.Cover(2f).Color(Colors.Blue).Angle(45);
 ColorFade.Uncover(2f).Image("res://my_overlay.png", ImageFit.Stretch).Angle(180);
 ```
 
-## Pixellation transition
+## Pixellate transition
 
 This pixellates the scene gradually, eventually fading out to the color/image overlay.
 
