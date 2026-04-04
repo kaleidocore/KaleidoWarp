@@ -59,7 +59,7 @@ The addon comes with 5 built-in, shader based transition styles, each individual
 
 | Transition class | Description |
 |------------|-------------|
-| `(Transition)` | Abstract base class for transitions |
+| (`Transition`) | Abstract base class for transitions |
 | `ColorFade` | A basic screen fade |
 | `Slide` | Slides the screen in or out towards one of the screen edges |
 | `Voronoi` | A randomized bubbly pattern that sweeps across the screen at a given angle |
