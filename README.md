@@ -190,6 +190,26 @@ Dissolve.Cover(2f).Color(Colors.Red).Pattern("res://dissolve1.png");
 Dissolve.Uncover(2f).Color(Colors.Red).Pattern("res://dissolve2.png");
 ```
 
+## Cancelling transitions
+The `WarpManager` class provides two methods for cancelling an ongoing transition:
+
+```csharp
+public void Abort()
+```
+
+This will abruptly reset whatever the WarpManager was doing and clear the warp queue. However, since the whole point is to provide smooth transitions, a better option is to use:
+```csharp
+public void Cancel(float maxDuration)
+```
+
+This will gracefully end the current transition within the alotted time by either rolling it back and/or fast-forwarding it, depending on if it is currently exiting or entering a scene. This is rare, but potentially useful if, for example, the user hits ESC during a transition and you want to return to the scene and/or bring up a menu. Another theoretical example is a custom loader scene that loads faster than expected (before even the entry transition has completed), and you quickly want to continue to the next scene.
+
+ Example:
+ ```csharp
+WarpManager.Instance.Cancel(0.5f); // Cancel and clear the queue
+WarpManager.Instance.WarpToFile("res://menu.tscn", ColorFade.Cover(1f), ColorFade.Uncover(1f)); // Queue a warp to the menu instead
+```
+
 ## Custom loaders
 For smooth loading of heavy scenes you may want to create a custom loader. However, under this framework loader scenes are nothing special; just transition (warp) to your loader scene normally, load your target scene however you want and finally transition (warp) to it when ready. The example project demonstrates this pattern.
 
