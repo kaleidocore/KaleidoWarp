@@ -192,3 +192,9 @@ Dissolve.Uncover(2f).Color(Colors.Red).Pattern("res://dissolve2.png");
 
 ## Custom loaders
 For smooth loading of heavy scenes you may want to create a custom loader. However, under this framework loader scenes are nothing special; just transition (warp) to your loader scene normally, load your target scene however you want and finally transition (warp) to it when ready. The example project demonstrates this pattern.
+
+## Issues
+If you have any issues, suggestions or feature requests, just report them as usual in the [issues](https://github.com/kaleidocore/KaleidoWarp/issues).
+
+## Show your support!
+I have no idea if the community actually appreciates my hard work with this addon - if you find it useful, please consider putting a star on the repo to keep me motivated!
