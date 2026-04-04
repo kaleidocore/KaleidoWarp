@@ -51,6 +51,16 @@ theme_override_font_sizes/font_size = 50
 text = "Slide
 "
 
+[node name="StickySlideButton" type="CheckButton" parent="UI" unique_id=1584519918]
+unique_name_in_owner = true
+offset_left = 597.0
+offset_top = 523.0
+offset_right = 693.0
+offset_bottom = 554.0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Sticky"
+
 [node name="VoronoiButton" type="Button" parent="UI" unique_id=1676621940]
 unique_name_in_owner = true
 offset_left = 145.0
@@ -61,6 +71,27 @@ theme_override_font_sizes/font_size = 50
 text = "Voronoi
 
 "
+
+[node name="VoronoiAngleLabel" type="Label" parent="UI" unique_id=1571673536]
+offset_left = 618.0
+offset_top = 631.0
+offset_right = 682.8
+offset_bottom = 660.6
+scale = Vector2(2.5, 2.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Angle"
+
+[node name="VoronoiAngleSpin" type="SpinBox" parent="UI" unique_id=267908298]
+unique_name_in_owner = true
+offset_left = 826.0
+offset_top = 629.00006
+offset_right = 912.5
+offset_bottom = 660.00006
+scale = Vector2(2.5, 2.5)
+max_value = 360.0
+rounded = true
+custom_arrow_step = 10.0
 
 [node name="PixellateButton" type="Button" parent="UI" unique_id=1952122545]
 unique_name_in_owner = true
@@ -73,12 +104,33 @@ text = "Pixellate
 
 "
 
+[node name="PixelAmountLabel" type="Label" parent="UI" unique_id=976704994]
+offset_left = 616.00006
+offset_top = 725.0
+offset_right = 699.60004
+offset_bottom = 753.0
+scale = Vector2(2.5, 2.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Amount"
+
+[node name="PixelAmountSpin" type="SpinBox" parent="UI" unique_id=2068778119]
+unique_name_in_owner = true
+offset_left = 829.0
+offset_top = 724.00006
+offset_right = 915.5
+offset_bottom = 755.00006
+scale = Vector2(2.5, 2.5)
+max_value = 1000.0
+rounded = true
+custom_arrow_step = 10.0
+
 [node name="DissolveButton" type="Button" parent="UI" unique_id=692852608]
 unique_name_in_owner = true
 offset_left = 145.0
-offset_top = 809.0
+offset_top = 814.0
 offset_right = 575.0
-offset_bottom = 886.0
+offset_bottom = 891.0
 theme_override_font_sizes/font_size = 50
 text = "Dissolve
 "
@@ -86,9 +138,9 @@ text = "Dissolve
 [node name="DissolveOptionButton" type="OptionButton" parent="UI" unique_id=1871078434]
 unique_name_in_owner = true
 offset_left = 589.0
-offset_top = 811.0
+offset_top = 816.0
 offset_right = 1171.0
-offset_bottom = 887.50006
+offset_bottom = 892.50006
 theme_override_font_sizes/font_size = 50
 alignment = 1
 clip_text = true

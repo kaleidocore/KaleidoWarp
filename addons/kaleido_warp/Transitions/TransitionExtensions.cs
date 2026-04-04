@@ -119,16 +119,6 @@ public static class TransitionExtensions
 	}
 
 	/// <summary>
-	/// Enables sticky behavior for the slide transition, creating a "sticky" effect where the image appears to be glued to the screen rather than moving with the slide.
-	/// </summary>
-	/// <typeparam name="T">The type of slide transition. Must inherit from Slide.</typeparam>
-	/// <param name="transition">The slide transition to configure.</param>
-	/// <returns>The slide transition with the updated sticky setting.</returns>
-	public static T Sticky<T>(this T transition)
-		where T : Slide
-		=> Sticky(transition, true);
-
-	/// <summary>
 	/// Sets the direction of the slide transition.
 	/// </summary>
 	/// <typeparam name="T">The type of slide to configure. Must inherit from Slide.</typeparam>
