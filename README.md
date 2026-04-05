@@ -66,7 +66,8 @@ The addon comes with 5 built-in, shader based transition styles, each individual
 | `Pixellation` | A pixellating effect reminiscent of the classic Super Mario pixel fade |
 | `Dissolve` | Uses a grayscale pattern texture to define when and where each screen pixel is overlaid and blended |
 
-Should these somehow not cover your needs you are free to implement your own custom transitions inherited from `Transition` (`Transition.tscn`), which handles most of the groundwork. And don't forget to share them here!
+*You can mix and match transition styles* for outro/intro however you like - as long as both of them have the same color and image they should overlap seamlessly.
+Should this somehow not cover your needs you are free to implement your own custom transitions inherited from `Transition` (`Transition.tscn`), which handles most of the groundwork. And don't forget to share them here!
 
 
 ## Configuring Transitions 🎭
@@ -82,7 +83,6 @@ public static T Uncover(float duration);
 ```
 
 The factories are primarily for convencience and the main difference between `Cover()` and `Uncover()` is that the latter initializes the transition to play in reverse.
-*You can mix and match transition styles* for outro/intro however you like - as long as both of them have the same color and image they should overlap seamlessly.
 
 ## Transition common base API
 
