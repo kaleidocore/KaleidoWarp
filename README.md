@@ -136,7 +136,7 @@ transition
 Examples:
 ```csharp
 // Slide the screen out at the bottom, revealing an image on a green background
-Slide.Cover(1f).Color(Colors.Green).Image("res://my_overlay.png").Direction(Direction.Down);
+Slide.Cover(1f).Color(Colors.Green).Image("res://my_overlay.png").Direction(Direction.Bottom);
 
 // Slide the new screen in from the top
 ColorFade.Uncover(1f).Color(Colors.Green).Image("res://my_overlay.png").Direction(Direction.Top);
