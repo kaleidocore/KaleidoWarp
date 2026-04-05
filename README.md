@@ -124,7 +124,7 @@ ColorFade.Uncover(3f).Color(Colors.Red).Image("res://my_overlay.png");
 
 ## Slide transition
 
-This transition slides the scene in a given direction.
+This transition slides the scene in a given direction, replacing it with the color/image overlay.
 
 The `Slide` transition adds the following properties:
 ```csharp
