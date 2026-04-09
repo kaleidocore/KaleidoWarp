@@ -184,16 +184,16 @@ Pixellate.Uncover(3f).Amount(70f).Origin(new(1,1));
 ## Dissolve transition
 
 Dissolve transitions enable transition animations through the use of dissolve textures. A dissolve texture is just a grayscale image that the shader will sample from and use as a mask when rendering the transition color/image overlay. It starts with the dissolve color threshold set to fully black, gradually increasing it to fully white across the transition duration. At any given point in time, transition overlay pixels will only be drawn if the corresponding pixel in the dissolve texture is below the current threshold. This can effectively create infinite variations of transition animations.
-The addon ships with a bunch of default dissolve textures (mostly stolen from [http://github.com/sempitern0](https://github.com/sempitern0/warp)) and made accessible via the `DissolvePattern` class, but you can also provide your own Texture2D or resource path.
+The addon ships with a bunch of default dissolve textures (some stolen from [http://github.com/sempitern0](https://github.com/sempitern0/warp)) and made accessible via the `DefaultPatterns` class, but you can also provide your own Texture2D or resource path.
 
 The `Dissolve` transition adds the following properties:
 ```csharp
 transition
-    .Pattern(p => p.Squares)    // The dissolve pattern texture to use (A DissolvePattern lambda, a custom Texture2D, or a path to a custom texture)
+    .Pattern(p => p.Cells)      // The dissolve pattern texture to use (A DefaultPatterns lambda, a custom Texture2D, or a path to a custom texture)
+    .Feather(0f)                // Sets the feathering amount for the dissolve effect, enabling smoother or sharper transitions at the dissolve edge.
     .Invert()                   // Inverts the dissolve pattern texture, effectively reversing the visual effect of the dissolve animation.
     .FlipX()                    // Flips the X coords of the dissolve texture, creating a mirrored effect along the horizontal axis of the dissolve animation.
-    .FlipY()                    // Flips the Y coords of the dissolve texture, creating a mirrored effect along the vertical axis of the dissolve animation.
-    .Feather(0.01f);            // Sets the feathering amount for the dissolve effect, enabling smoother or sharper transitions at the dissolve edge.
+    .FlipY();                   // Flips the Y coords of the dissolve texture, creating a mirrored effect along the vertical axis of the dissolve animation.
 ```
 
 Examples:
@@ -205,10 +205,10 @@ Dissolve.Cover(2f).Pattern(p => p.Circle);
 Dissolve.Uncover(2f).Pattern(p => p.Circle).Invert();
 
 // Exit the scene using a custom pattern, in red
-Dissolve.Cover(2f).Color(Colors.Red).Pattern("res://dissolve1.png");
+Dissolve.Cover(3f).Color(Colors.Red).Pattern("res://dissolve1.png");
 
 // Reveal the new scene, using a different custom pattern
-Dissolve.Uncover(2f).Color(Colors.Red).Pattern("res://dissolve2.png");
+Dissolve.Uncover(3f).Color(Colors.Red).Pattern("res://dissolve2.png").Feather(0.2f);
 ```
 
 ## Cancelling transitions
