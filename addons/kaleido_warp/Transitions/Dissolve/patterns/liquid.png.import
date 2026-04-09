@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://njralh51bj8m"
-path="res://.godot/imported/wipe_h.png-661774e033af637dc53db5ce84e313eb.ctex"
+uid="uid://cl16t12ba21rm"
+path="res://.godot/imported/liquid.png-2adf8274ff4553ff1c1ff3a00a133436.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/kaleido_warp/Transitions/Dissolve/patterns/wipe_h.png"
-dest_files=["res://.godot/imported/wipe_h.png-661774e033af637dc53db5ce84e313eb.ctex"]
+source_file="res://addons/kaleido_warp/Transitions/Dissolve/patterns/liquid.png"
+dest_files=["res://.godot/imported/liquid.png-2adf8274ff4553ff1c1ff3a00a133436.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://njralh51bj8m"
-path="res://.godot/imported/wipe_h.png-661774e033af637dc53db5ce84e313eb.ctex"
+uid="uid://cy4nypjfwuc01"
+path="res://.godot/imported/pixel_noise_2.png-face63d188bc99430ff21961fd197e78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/kaleido_warp/Transitions/Dissolve/patterns/wipe_h.png"
-dest_files=["res://.godot/imported/wipe_h.png-661774e033af637dc53db5ce84e313eb.ctex"]
+source_file="res://addons/kaleido_warp/Transitions/Dissolve/patterns/pixel_noise_2.png"
+dest_files=["res://.godot/imported/pixel_noise_2.png-face63d188bc99430ff21961fd197e78.ctex"]
 
 [params]
 

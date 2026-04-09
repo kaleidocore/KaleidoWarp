@@ -63,13 +63,13 @@ public partial class Scene1 : Node2D
 		DissolveOptionButton.Selected = DissolvePatternIndex;
 		DissolveOptionButton.ItemSelected += index => DissolvePatternIndex = (int)index;
 
-		// Transition with (mostly) default settings
+		// Transition with (some) settings applied
 		ColorFadeButton.Pressed += () => WarpManager.Instance.WarpToPacked(TargetScene, ColorFade.Cover().Color(OverlayColor).Image(OverlayImage), ColorFade.Uncover().Color(OverlayColor).Image(OverlayImage));
-		SlideButton.Pressed += () => WarpManager.Instance.WarpToPacked(TargetScene, Slide.Cover().Color(OverlayColor).Image(OverlayImage).Sticky(StickySlide), Slide.Uncover().Color(OverlayColor).Image(OverlayImage).Sticky(StickySlide));
-		VoronoiButton.Pressed += () => WarpManager.Instance.WarpToPacked(TargetScene, Voronoi.Cover().Color(OverlayColor).Image(OverlayImage).Angle(VoronoiAngle), Voronoi.Uncover().Color(OverlayColor).Image(OverlayImage).Angle(VoronoiAngle));
+		SlideButton.Pressed += () => WarpManager.Instance.WarpToPacked(TargetScene, Slide.Cover().Color(OverlayColor).Image(OverlayImage).Sticky(StickySlide), Slide.Uncover().Color(OverlayColor).Image(OverlayImage).Sticky(StickySlide).Direction(Direction.Top));
+		VoronoiButton.Pressed += () => WarpManager.Instance.WarpToPacked(TargetScene, Voronoi.Cover().Color(OverlayColor).Image(OverlayImage).Angle(VoronoiAngle), Voronoi.Uncover().Color(OverlayColor).Image(OverlayImage).Angle(VoronoiAngle + 180));
 		PixellateButton.Pressed += () => WarpManager.Instance.WarpToPacked(TargetScene, Pixellate.Cover().Color(OverlayColor).Image(OverlayImage).Amount(PixelAmount), Pixellate.Uncover().Color(OverlayColor).Image(OverlayImage).Amount(PixelAmount));
-		DissolveButton.Pressed += () => WarpManager.Instance.WarpToPacked(TargetScene, Dissolve.Cover().Color(OverlayColor).Image(OverlayImage).Pattern(DissolveTexture), Dissolve.Uncover().Color(OverlayColor).Image(OverlayImage).Pattern(DissolveTexture));
-		LoaderButton.Pressed += () => WarpManager.Instance.WarpToPacked(LoaderScene, Dissolve.Cover(1f).Pattern(p => p.TileReveal), null);
+		DissolveButton.Pressed += () => WarpManager.Instance.WarpToPacked(TargetScene, Dissolve.Cover().Color(OverlayColor).Image(OverlayImage).Pattern(DissolveTexture), Dissolve.Uncover().Color(OverlayColor).Image(OverlayImage).Pattern(DissolveTexture).Invert());
+		LoaderButton.Pressed += () => WarpManager.Instance.WarpToPacked(LoaderScene, Dissolve.Cover(3f).Pattern(p => p.TileReveal).Feather(.1f).Ease(Tween.EaseType.InOut).Curve(Tween.TransitionType.Sine), null);
 	}
 
 	public override void _Process(double delta)

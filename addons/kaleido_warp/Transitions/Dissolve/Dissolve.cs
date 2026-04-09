@@ -48,15 +48,15 @@ public partial class Dissolve : Transition, ITransitionFactory<Dissolve>
 	public float Feather { get; set; } = 0f;
 
 	/// <summary>
-	/// A function that selects the dissolve texture from the available patterns.
+	/// A function that selects the dissolve texture from the default patterns.
 	/// </summary>
-	public Func<DissolvePatterns, Texture2D> DissolveTextureSelector { get; set; } = p => p.Squares;
+	public Func<DefaultPatterns, Texture2D> DefaultSelector { get; set; } = p => p.Cells;
 
 	public override void _Ready()
 	{
 		base._Ready();
 		LoadShader(ShaderPath);
-		DissolveTexture ??= DissolveTextureSelector(new DissolvePatterns(BasePath));
+		DissolveTexture ??= DefaultSelector(new DefaultPatterns(BasePath));
 	}
 
 	public override void _Process(double delta)

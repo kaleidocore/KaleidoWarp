@@ -142,10 +142,10 @@ public static class TransitionExtensions
 	/// <param name="pattern">A selector function that takes a Patterns instance and returns a Texture2D.
 	/// pattern.</param>
 	/// <returns>The modified dissolve instance with the updated texture selection function.</returns>
-	public static T Pattern<T>(this T dissolve, Func<DissolvePatterns, Texture2D> pattern)
+	public static T Pattern<T>(this T dissolve, Func<DefaultPatterns, Texture2D> pattern)
 		where T : Dissolve
 	{
-		dissolve.DissolveTextureSelector = pattern;
+		dissolve.DefaultSelector = pattern;
 		return dissolve;
 	}
 
