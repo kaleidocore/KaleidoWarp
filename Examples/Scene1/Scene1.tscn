@@ -34,60 +34,81 @@ vertical_alignment = 1
 
 [node name="ColorFadeButton" type="Button" parent="UI" unique_id=849855513]
 unique_name_in_owner = true
-offset_left = 144.0
+offset_left = 121.0
 offset_top = 442.0
-offset_right = 574.0
+offset_right = 551.0
 offset_bottom = 519.0
 theme_override_font_sizes/font_size = 50
 text = "ColorFade"
 
 [node name="SlideButton" type="Button" parent="UI" unique_id=1911637979]
 unique_name_in_owner = true
-offset_left = 144.0
+offset_left = 121.0
 offset_top = 532.0
-offset_right = 574.0
+offset_right = 551.0
 offset_bottom = 609.0
 theme_override_font_sizes/font_size = 50
 text = "Slide
 "
 
-[node name="StickySlideButton" type="CheckButton" parent="UI" unique_id=1584519918]
+[node name="DirectionLabel" type="Label" parent="UI" unique_id=82078842]
+offset_left = 568.0
+offset_top = 532.0
+offset_right = 657.0
+offset_bottom = 561.6
+scale = Vector2(2.5, 2.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Direction"
+
+[node name="DirectionOptionButton" type="OptionButton" parent="UI" unique_id=877792447]
 unique_name_in_owner = true
-offset_left = 597.0
-offset_top = 523.0
-offset_right = 693.0
-offset_bottom = 554.0
+offset_left = 803.0
+offset_top = 536.0
+offset_right = 974.0
+offset_bottom = 612.50006
+theme_override_font_sizes/font_size = 30
+alignment = 1
+clip_text = true
+expand_icon = true
+
+[node name="StickyButton" type="CheckButton" parent="UI" unique_id=1584519918]
+unique_name_in_owner = true
+offset_left = 991.0
+offset_top = 527.0
+offset_right = 1087.0
+offset_bottom = 558.0
 scale = Vector2(3, 3)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Sticky"
 
 [node name="VoronoiButton" type="Button" parent="UI" unique_id=1676621940]
 unique_name_in_owner = true
-offset_left = 145.0
+offset_left = 122.0
 offset_top = 628.0
-offset_right = 575.0
+offset_right = 552.0
 offset_bottom = 705.0
 theme_override_font_sizes/font_size = 50
 text = "Voronoi
 
 "
 
-[node name="VoronoiAngleLabel" type="Label" parent="UI" unique_id=1571673536]
-offset_left = 618.0
+[node name="AngleLabel" type="Label" parent="UI" unique_id=1571673536]
+offset_left = 570.0
 offset_top = 631.0
-offset_right = 682.8
+offset_right = 634.8
 offset_bottom = 660.6
 scale = Vector2(2.5, 2.5)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Angle"
 
-[node name="VoronoiAngleSpin" type="SpinBox" parent="UI" unique_id=267908298]
+[node name="AngleSpin" type="SpinBox" parent="UI" unique_id=267908298]
 unique_name_in_owner = true
-offset_left = 826.0
-offset_top = 629.00006
-offset_right = 912.5
-offset_bottom = 660.00006
+offset_left = 803.0
+offset_top = 629.0
+offset_right = 889.5
+offset_bottom = 660.0
 scale = Vector2(2.5, 2.5)
 max_value = 360.0
 rounded = true
@@ -95,9 +116,9 @@ custom_arrow_step = 10.0
 
 [node name="PixellateButton" type="Button" parent="UI" unique_id=1952122545]
 unique_name_in_owner = true
-offset_left = 145.0
+offset_left = 122.0
 offset_top = 721.0
-offset_right = 575.0
+offset_right = 552.0
 offset_bottom = 798.0
 theme_override_font_sizes/font_size = 50
 text = "Pixellate
@@ -105,10 +126,10 @@ text = "Pixellate
 "
 
 [node name="PixelAmountLabel" type="Label" parent="UI" unique_id=976704994]
-offset_left = 616.00006
-offset_top = 725.0
-offset_right = 699.60004
-offset_bottom = 753.0
+offset_left = 573.0
+offset_top = 723.0
+offset_right = 656.6
+offset_bottom = 751.0
 scale = Vector2(2.5, 2.5)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
@@ -116,10 +137,10 @@ text = "Amount"
 
 [node name="PixelAmountSpin" type="SpinBox" parent="UI" unique_id=2068778119]
 unique_name_in_owner = true
-offset_left = 829.0
-offset_top = 724.00006
-offset_right = 915.5
-offset_bottom = 755.00006
+offset_left = 806.0
+offset_top = 724.0
+offset_right = 892.5
+offset_bottom = 755.0
 scale = Vector2(2.5, 2.5)
 max_value = 1000.0
 rounded = true
@@ -127,30 +148,50 @@ custom_arrow_step = 10.0
 
 [node name="DissolveButton" type="Button" parent="UI" unique_id=692852608]
 unique_name_in_owner = true
-offset_left = 145.0
+offset_left = 122.0
 offset_top = 814.0
-offset_right = 575.0
+offset_right = 552.0
 offset_bottom = 891.0
 theme_override_font_sizes/font_size = 50
 text = "Dissolve
 "
 
-[node name="DissolveOptionButton" type="OptionButton" parent="UI" unique_id=1871078434]
+[node name="PatternOptionButton" type="OptionButton" parent="UI" unique_id=1871078434]
 unique_name_in_owner = true
-offset_left = 589.0
+offset_left = 566.0
 offset_top = 816.0
-offset_right = 1171.0
+offset_right = 978.0
 offset_bottom = 892.50006
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 30
 alignment = 1
 clip_text = true
 expand_icon = true
 
+[node name="FeatherLabel" type="Label" parent="UI" unique_id=171054423]
+offset_left = 1013.0001
+offset_top = 816.00006
+offset_right = 1132.6001
+offset_bottom = 844.00006
+scale = Vector2(2.5, 2.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Feather"
+
+[node name="FeatherSpin" type="SpinBox" parent="UI" unique_id=348965073]
+unique_name_in_owner = true
+offset_left = 1221.0
+offset_top = 817.0
+offset_right = 1307.5
+offset_bottom = 848.0
+scale = Vector2(2.5, 2.5)
+max_value = 1.0
+step = 0.01
+
 [node name="LoaderButton" type="Button" parent="UI" unique_id=689130947]
 unique_name_in_owner = true
-offset_left = 142.0
+offset_left = 119.0
 offset_top = 947.0
-offset_right = 572.0
+offset_right = 549.0
 offset_bottom = 1024.0
 theme_override_font_sizes/font_size = 50
 text = "Loader...
@@ -158,30 +199,59 @@ text = "Loader...
 
 "
 
-[node name="UseImage" type="CheckButton" parent="UI" unique_id=1728388119]
-unique_name_in_owner = true
-offset_left = 1440.0
-offset_top = 685.84314
-offset_right = 1536.0
-offset_bottom = 716.84314
-scale = Vector2(3, 3)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Image"
-
-[node name="OverlayImage" type="Sprite2D" parent="UI" unique_id=1792539118]
-unique_name_in_owner = true
-position = Vector2(1588, 601)
-scale = Vector2(0.13183582, 0.13183582)
-texture = ExtResource("2_rjg6l")
+[node name="ColorRect" type="ColorRect" parent="UI" unique_id=956478385]
+offset_left = 1377.0
+offset_top = 376.0
+offset_right = 1866.0
+offset_bottom = 746.0
+color = Color(1, 1, 1, 0.12941177)
 
 [node name="ColorPicker" type="ColorPickerButton" parent="UI" unique_id=1575690471]
 unique_name_in_owner = true
-offset_left = 1270.0
-offset_top = 540.84314
-offset_right = 1407.0
-offset_bottom = 677.84314
+offset_left = 1413.0
+offset_top = 523.0
+offset_right = 1550.0
+offset_bottom = 660.0
 theme_override_font_sizes/font_size = 50
 text = "Color"
+
+[node name="DurationLabel" type="Label" parent="UI" unique_id=119425873]
+offset_left = 1392.0
+offset_top = 411.9999
+offset_right = 1478.0
+offset_bottom = 439.9999
+scale = Vector2(2.5, 2.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Duration"
+
+[node name="DurationSpin" type="SpinBox" parent="UI" unique_id=2092630416]
+unique_name_in_owner = true
+offset_left = 1627.9999
+offset_top = 411.0
+offset_right = 1714.4999
+offset_bottom = 442.0
+scale = Vector2(2.5, 2.5)
+min_value = 0.5
+max_value = 60.0
+step = 0.5
+value = 0.5
+
+[node name="OverlayImage" type="Sprite2D" parent="UI" unique_id=1792539118]
+unique_name_in_owner = true
+position = Vector2(1693, 579.49994)
+scale = Vector2(0.13183582, 0.13183582)
+texture = ExtResource("2_rjg6l")
+
+[node name="UseImage" type="CheckButton" parent="UI" unique_id=1728388119]
+unique_name_in_owner = true
+offset_left = 1550.0
+offset_top = 655.0
+offset_right = 1646.0
+offset_bottom = 686.0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Image"
 
 [node name="BuildNote" type="Label" parent="." unique_id=1862488798]
 offset_left = 45.0

@@ -26,7 +26,7 @@ public partial class Slide : Transition, ITransitionFactory<Slide>
 	/// Controls whether the overlay image should "stick" to the screen during the slide transition, meaning it will not move with the sliding effect. When set to true, the image will remain fixed in place while the transition occurs.
 	/// </summary>
 	[Export]
-	public bool Sticky = true;
+	public bool Sticky = false;
 
 	public override void _Ready()
 	{
