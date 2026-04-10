@@ -16,6 +16,7 @@ public partial class Scene1 : Node2D
 	static float Duration { get; set; } = 1f;
 	static Color OverlayColor { get; set; } = Colors.Black;
 	static bool UseImage { get; set; } = false;
+	static int CurrentTab { get; set; }
 	static Direction SlideDirection { get; set; } = Direction.Left;
 	static bool StickySlide { get; set; } = false;
 	static int VoronoiAngle { get; set; } = 0;
@@ -31,6 +32,7 @@ public partial class Scene1 : Node2D
 	SpinBox DurationSpin => GetNode<SpinBox>("%DurationSpin");
 	ColorPickerButton ColorPicker => GetNode<ColorPickerButton>("%ColorPicker");
 	CheckButton UseImageButton => GetNode<CheckButton>("%UseImage");
+	TabContainer Transitions => GetNode<TabContainer>("%Transitions");
 	Button ColorFadeButton => GetNode<Button>("%ColorFadeButton");
 	Button SlideButton => GetNode<Button>("%SlideButton");
 	OptionButton DirectionOptionButton => GetNode<OptionButton>("%DirectionOptionButton");
@@ -63,6 +65,8 @@ public partial class Scene1 : Node2D
 		ColorPicker.ColorChanged += (c) => OverlayColor = c;
 		UseImageButton.ButtonPressed = UseImage;
 		UseImageButton.Toggled += (v) => UseImage = v;
+		Transitions.CurrentTab = CurrentTab;
+		Transitions.TabChanged += index => CurrentTab = (int)index;
 		DirectionOptionButton.Selected = (int)SlideDirection;
 		DirectionOptionButton.ItemSelected += index => SlideDirection = (Direction)index;
 		StickyButton.ButtonPressed = StickySlide;

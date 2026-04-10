@@ -32,226 +32,17 @@ vertical_alignment = 1
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=2097663328]
 
-[node name="ColorFadeButton" type="Button" parent="UI" unique_id=849855513]
-unique_name_in_owner = true
-offset_left = 121.0
-offset_top = 442.0
-offset_right = 551.0
-offset_bottom = 519.0
-theme_override_font_sizes/font_size = 50
-text = "ColorFade"
-
-[node name="SlideButton" type="Button" parent="UI" unique_id=1911637979]
-unique_name_in_owner = true
-offset_left = 121.0
-offset_top = 532.0
-offset_right = 551.0
-offset_bottom = 609.0
-theme_override_font_sizes/font_size = 50
-text = "Slide
-"
-
-[node name="DirectionLabel" type="Label" parent="UI" unique_id=82078842]
-offset_left = 568.0
-offset_top = 532.0
-offset_right = 657.0
-offset_bottom = 561.6
-scale = Vector2(2.5, 2.5)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Direction"
-
-[node name="DirectionOptionButton" type="OptionButton" parent="UI" unique_id=877792447]
-unique_name_in_owner = true
-offset_left = 803.0
-offset_top = 536.0
-offset_right = 974.0
-offset_bottom = 612.50006
-theme_override_font_sizes/font_size = 30
-alignment = 1
-clip_text = true
-expand_icon = true
-
-[node name="StickyButton" type="CheckButton" parent="UI" unique_id=1584519918]
-unique_name_in_owner = true
-offset_left = 991.0
-offset_top = 527.0
-offset_right = 1087.0
-offset_bottom = 558.0
-scale = Vector2(3, 3)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Sticky"
-
-[node name="VoronoiButton" type="Button" parent="UI" unique_id=1676621940]
-unique_name_in_owner = true
-offset_left = 122.0
-offset_top = 628.0
-offset_right = 552.0
-offset_bottom = 705.0
-theme_override_font_sizes/font_size = 50
-text = "Voronoi
-
-"
-
-[node name="AngleLabel" type="Label" parent="UI" unique_id=1571673536]
-offset_left = 570.0
-offset_top = 631.0
-offset_right = 634.8
-offset_bottom = 660.6
-scale = Vector2(2.5, 2.5)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Angle"
-
-[node name="AngleSpin" type="SpinBox" parent="UI" unique_id=267908298]
-unique_name_in_owner = true
-offset_left = 803.0
-offset_top = 629.0
-offset_right = 889.5
-offset_bottom = 660.0
-scale = Vector2(2.5, 2.5)
-max_value = 360.0
-rounded = true
-custom_arrow_step = 10.0
-
-[node name="PixellateButton" type="Button" parent="UI" unique_id=1952122545]
-unique_name_in_owner = true
-offset_left = 122.0
-offset_top = 721.0
-offset_right = 552.0
-offset_bottom = 798.0
-theme_override_font_sizes/font_size = 50
-text = "Pixellate
-
-"
-
-[node name="PixelAmountLabel" type="Label" parent="UI" unique_id=976704994]
-offset_left = 573.0
-offset_top = 723.0
-offset_right = 656.6
-offset_bottom = 751.0
-scale = Vector2(2.5, 2.5)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Amount"
-
-[node name="PixelAmountSpin" type="SpinBox" parent="UI" unique_id=2068778119]
-unique_name_in_owner = true
-offset_left = 806.0
-offset_top = 724.0
-offset_right = 892.5
-offset_bottom = 755.0
-scale = Vector2(2.5, 2.5)
-max_value = 1000.0
-rounded = true
-custom_arrow_step = 10.0
-
-[node name="DissolveButton" type="Button" parent="UI" unique_id=692852608]
-unique_name_in_owner = true
-offset_left = 122.0
-offset_top = 814.0
-offset_right = 552.0
-offset_bottom = 891.0
-theme_override_font_sizes/font_size = 50
-text = "Dissolve
-"
-
-[node name="PatternOptionButton" type="OptionButton" parent="UI" unique_id=1871078434]
-unique_name_in_owner = true
-offset_left = 566.0
-offset_top = 816.0
-offset_right = 978.0
-offset_bottom = 892.50006
-theme_override_font_sizes/font_size = 30
-alignment = 1
-clip_text = true
-expand_icon = true
-
-[node name="FeatherLabel" type="Label" parent="UI" unique_id=171054423]
-offset_left = 1013.0001
-offset_top = 816.00006
-offset_right = 1132.6001
-offset_bottom = 844.00006
-scale = Vector2(2.5, 2.5)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Feather"
-
-[node name="FeatherSpin" type="SpinBox" parent="UI" unique_id=348965073]
-unique_name_in_owner = true
-offset_left = 1221.0
-offset_top = 817.0
-offset_right = 1307.5
-offset_bottom = 848.0
-scale = Vector2(2.5, 2.5)
-max_value = 1.0
-step = 0.01
-
 [node name="LoaderButton" type="Button" parent="UI" unique_id=689130947]
 unique_name_in_owner = true
-offset_left = 119.0
-offset_top = 947.0
-offset_right = 549.0
-offset_bottom = 1024.0
+offset_left = 126.0
+offset_top = 964.0
+offset_right = 556.0
+offset_bottom = 1041.0
 theme_override_font_sizes/font_size = 50
 text = "Loader...
 
 
 "
-
-[node name="ColorRect" type="ColorRect" parent="UI" unique_id=956478385]
-offset_left = 1377.0
-offset_top = 376.0
-offset_right = 1866.0
-offset_bottom = 746.0
-color = Color(1, 1, 1, 0.12941177)
-
-[node name="ColorPicker" type="ColorPickerButton" parent="UI" unique_id=1575690471]
-unique_name_in_owner = true
-offset_left = 1413.0
-offset_top = 523.0
-offset_right = 1550.0
-offset_bottom = 660.0
-theme_override_font_sizes/font_size = 50
-text = "Color"
-
-[node name="DurationLabel" type="Label" parent="UI" unique_id=119425873]
-offset_left = 1392.0
-offset_top = 411.9999
-offset_right = 1478.0
-offset_bottom = 439.9999
-scale = Vector2(2.5, 2.5)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Duration"
-
-[node name="DurationSpin" type="SpinBox" parent="UI" unique_id=2092630416]
-unique_name_in_owner = true
-offset_left = 1627.9999
-offset_top = 411.0
-offset_right = 1714.4999
-offset_bottom = 442.0
-scale = Vector2(2.5, 2.5)
-min_value = 0.5
-max_value = 60.0
-step = 0.5
-value = 0.5
-
-[node name="OverlayImage" type="Sprite2D" parent="UI" unique_id=1792539118]
-unique_name_in_owner = true
-position = Vector2(1693, 579.49994)
-scale = Vector2(0.13183582, 0.13183582)
-texture = ExtResource("2_rjg6l")
-
-[node name="UseImage" type="CheckButton" parent="UI" unique_id=1728388119]
-unique_name_in_owner = true
-offset_left = 1550.0
-offset_top = 655.0
-offset_right = 1646.0
-offset_bottom = 686.0
-scale = Vector2(3, 3)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Image"
 
 [node name="BuildNote" type="Label" parent="." unique_id=1862488798]
 offset_left = 45.0
@@ -262,4 +53,281 @@ theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 text = "Plugin load error? Just build the Godot project first!"
 horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Transitions" type="TabContainer" parent="." unique_id=1634551375]
+unique_name_in_owner = true
+offset_left = 117.0
+offset_top = 465.0
+offset_right = 1233.0
+offset_bottom = 931.0
+theme_override_font_sizes/font_size = 50
+current_tab = 0
+
+[node name="ColorFade" type="Control" parent="Transitions" unique_id=70605068]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="ColorFadeButton" type="Button" parent="Transitions/ColorFade" unique_id=849855513]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 45.0
+offset_top = 267.0
+offset_right = 475.0
+offset_bottom = 344.0
+theme_override_font_sizes/font_size = 50
+text = "Go!"
+
+[node name="Slide" type="Control" parent="Transitions" unique_id=1170182304]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="SlideButton" type="Button" parent="Transitions/Slide" unique_id=1911637979]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 50.0
+offset_top = 274.0
+offset_right = 480.0
+offset_bottom = 351.0
+theme_override_font_sizes/font_size = 50
+text = "Go!
+"
+
+[node name="DirectionLabel" type="Label" parent="Transitions/Slide" unique_id=82078842]
+layout_mode = 0
+offset_left = 63.99997
+offset_top = 56.000015
+offset_right = 152.99997
+offset_bottom = 85.59999
+scale = Vector2(2.5, 2.5)
+theme_override_font_sizes/font_size = 20
+text = "Direction"
+
+[node name="DirectionOptionButton" type="OptionButton" parent="Transitions/Slide" unique_id=877792447]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 344.0
+offset_top = 63.0
+offset_right = 515.0
+offset_bottom = 139.50006
+theme_override_font_sizes/font_size = 30
+alignment = 1
+clip_text = true
+expand_icon = true
+
+[node name="StickyButton" type="CheckButton" parent="Transitions/Slide" unique_id=1584519918]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 50.0
+offset_top = 129.0
+offset_right = 146.0
+offset_bottom = 160.0
+scale = Vector2(3, 3)
+text = "Sticky"
+
+[node name="Voronoi" type="Control" parent="Transitions" unique_id=911661674]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="VoronoiButton" type="Button" parent="Transitions/Voronoi" unique_id=1676621940]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 48.0
+offset_top = 270.0
+offset_right = 478.0
+offset_bottom = 347.0
+theme_override_font_sizes/font_size = 50
+text = "Go!
+
+"
+
+[node name="AngleLabel" type="Label" parent="Transitions/Voronoi" unique_id=1571673536]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 68.000015
+offset_right = 122.79999
+offset_bottom = 97.59999
+scale = Vector2(2.5, 2.5)
+theme_override_font_sizes/font_size = 20
+text = "Angle"
+
+[node name="AngleSpin" type="SpinBox" parent="Transitions/Voronoi" unique_id=267908298]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 291.0
+offset_top = 66.000015
+offset_right = 377.5
+offset_bottom = 97.000015
+scale = Vector2(2.5, 2.5)
+max_value = 360.0
+rounded = true
+custom_arrow_step = 10.0
+
+[node name="Pixellate" type="Control" parent="Transitions" unique_id=1739878799]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="PixellateButton" type="Button" parent="Transitions/Pixellate" unique_id=1952122545]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 47.0
+offset_top = 263.0
+offset_right = 477.0
+offset_bottom = 340.0
+theme_override_font_sizes/font_size = 50
+text = "Go!
+
+"
+
+[node name="PixelAmountLabel" type="Label" parent="Transitions/Pixellate" unique_id=976704994]
+layout_mode = 0
+offset_left = 48.99997
+offset_top = 67.000015
+offset_right = 132.59995
+offset_bottom = 95.000015
+scale = Vector2(2.5, 2.5)
+theme_override_font_sizes/font_size = 20
+text = "Amount"
+
+[node name="PixelAmountSpin" type="SpinBox" parent="Transitions/Pixellate" unique_id=2068778119]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 281.99997
+offset_top = 68.000015
+offset_right = 368.49997
+offset_bottom = 99.000015
+scale = Vector2(2.5, 2.5)
+max_value = 1000.0
+rounded = true
+custom_arrow_step = 10.0
+
+[node name="Dissolve" type="Control" parent="Transitions" unique_id=1975765733]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 4
+
+[node name="DissolveButton" type="Button" parent="Transitions/Dissolve" unique_id=692852608]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 45.0
+offset_top = 273.0
+offset_right = 475.0
+offset_bottom = 350.0
+theme_override_font_sizes/font_size = 50
+text = "Go!
+
+"
+
+[node name="PatternLabel" type="Label" parent="Transitions/Dissolve" unique_id=1436796868]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 63.999996
+offset_right = 127.0
+offset_bottom = 92.0
+scale = Vector2(2.5, 2.5)
+theme_override_font_sizes/font_size = 20
+text = "Pattern"
+
+[node name="PatternOptionButton" type="OptionButton" parent="Transitions/Dissolve" unique_id=1871078434]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 300.0
+offset_top = 56.0
+offset_right = 712.0
+offset_bottom = 132.5
+theme_override_font_sizes/font_size = 30
+alignment = 1
+clip_text = true
+expand_icon = true
+
+[node name="FeatherLabel" type="Label" parent="Transitions/Dissolve" unique_id=171054423]
+layout_mode = 0
+offset_left = 49.000004
+offset_top = 162.0
+offset_right = 124.0
+offset_bottom = 190.0
+scale = Vector2(2.5, 2.5)
+theme_override_font_sizes/font_size = 20
+text = "Feather"
+
+[node name="FeatherSpin" type="SpinBox" parent="Transitions/Dissolve" unique_id=348965073]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 297.0
+offset_top = 164.00002
+offset_right = 383.5
+offset_bottom = 195.00002
+scale = Vector2(2.5, 2.5)
+max_value = 1.0
+step = 0.01
+
+[node name="Common" type="ColorRect" parent="." unique_id=1251245867]
+offset_left = 1301.0
+offset_top = 480.0
+offset_right = 1807.385
+offset_bottom = 926.0
+color = Color(0, 0, 0, 0.30980393)
+
+[node name="ColorPicker" type="ColorPickerButton" parent="Common" unique_id=1575690471]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 70.0
+offset_top = 52.0
+offset_right = 207.0
+offset_bottom = 189.0
+theme_override_font_sizes/font_size = 50
+text = "Color"
+
+[node name="DurationLabel" type="Label" parent="Common" unique_id=119425873]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 303.9999
+offset_right = 118.0
+offset_bottom = 331.9999
+scale = Vector2(2.5, 2.5)
+theme_override_font_sizes/font_size = 20
+text = "Duration"
+
+[node name="DurationSpin" type="SpinBox" parent="Common" unique_id=2092630416]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 267.99988
+offset_top = 303.0
+offset_right = 354.49988
+offset_bottom = 334.0
+scale = Vector2(2.5, 2.5)
+min_value = 0.5
+max_value = 60.0
+step = 0.5
+value = 0.5
+
+[node name="OverlayImage" type="Sprite2D" parent="Common" unique_id=1792539118]
+unique_name_in_owner = true
+position = Vector2(350, 116.5)
+scale = Vector2(0.13183582, 0.13183582)
+texture = ExtResource("2_rjg6l")
+
+[node name="UseImage" type="CheckButton" parent="Common" unique_id=1728388119]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 204.0
+offset_top = 189.0
+offset_right = 300.0
+offset_bottom = 220.0
+scale = Vector2(3, 3)
+text = "Image"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2011616984]
+offset_left = 1495.0
+offset_top = 424.0
+offset_right = 1803.0
+offset_bottom = 474.0
+theme_override_colors/default_color = Color(0.7302159, 0.730216, 0.73021597, 1)
+theme_override_font_sizes/italics_font_size = 30
+bbcode_enabled = true
+text = "[i]KaleidoWarp 1.1[/i]"
+horizontal_alignment = 2
 vertical_alignment = 1
