@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c2qmj2injevky"]
 
-[ext_resource type="Script" uid="uid://d3y5j3laewqs1" path="res://Scenes/Loader/Loader.cs" id="1_qur2c"]
+[ext_resource type="Script" uid="uid://d3y5j3laewqs1" path="res://Examples/Loader/Loader.cs" id="1_qur2c"]
 
 [sub_resource type="Animation" id="Animation_qur2c"]
 resource_name = "Enter"
@@ -65,7 +65,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+color = Color(0.39215687, 0.58431375, 0.92941177, 1)
 
 [node name="Banner" type="ColorRect" parent="." unique_id=1174434333]
 unique_name_in_owner = true

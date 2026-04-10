@@ -126,49 +126,10 @@ offset_bottom = 160.0
 scale = Vector2(3, 3)
 text = "Sticky"
 
-[node name="Voronoi" type="Control" parent="Transitions" unique_id=911661674]
-visible = false
-layout_mode = 2
-metadata/_tab_index = 2
-
-[node name="VoronoiButton" type="Button" parent="Transitions/Voronoi" unique_id=1676621940]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 48.0
-offset_top = 270.0
-offset_right = 478.0
-offset_bottom = 347.0
-theme_override_font_sizes/font_size = 50
-text = "Go!
-
-"
-
-[node name="AngleLabel" type="Label" parent="Transitions/Voronoi" unique_id=1571673536]
-layout_mode = 0
-offset_left = 58.0
-offset_top = 68.000015
-offset_right = 122.79999
-offset_bottom = 97.59999
-scale = Vector2(2.5, 2.5)
-theme_override_font_sizes/font_size = 20
-text = "Angle"
-
-[node name="AngleSpin" type="SpinBox" parent="Transitions/Voronoi" unique_id=267908298]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 291.0
-offset_top = 66.000015
-offset_right = 377.5
-offset_bottom = 97.000015
-scale = Vector2(2.5, 2.5)
-max_value = 360.0
-rounded = true
-custom_arrow_step = 10.0
-
 [node name="Pixellate" type="Control" parent="Transitions" unique_id=1739878799]
 visible = false
 layout_mode = 2
-metadata/_tab_index = 3
+metadata/_tab_index = 2
 
 [node name="PixellateButton" type="Button" parent="Transitions/Pixellate" unique_id=1952122545]
 unique_name_in_owner = true
@@ -201,6 +162,45 @@ offset_right = 368.49997
 offset_bottom = 99.000015
 scale = Vector2(2.5, 2.5)
 max_value = 1000.0
+rounded = true
+custom_arrow_step = 10.0
+
+[node name="Voronoi" type="Control" parent="Transitions" unique_id=911661674]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="VoronoiButton" type="Button" parent="Transitions/Voronoi" unique_id=1676621940]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 48.0
+offset_top = 270.0
+offset_right = 478.0
+offset_bottom = 347.0
+theme_override_font_sizes/font_size = 50
+text = "Go!
+
+"
+
+[node name="AngleLabel" type="Label" parent="Transitions/Voronoi" unique_id=1571673536]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 68.000015
+offset_right = 122.79999
+offset_bottom = 97.59999
+scale = Vector2(2.5, 2.5)
+theme_override_font_sizes/font_size = 20
+text = "Angle"
+
+[node name="AngleSpin" type="SpinBox" parent="Transitions/Voronoi" unique_id=267908298]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 291.0
+offset_top = 66.000015
+offset_right = 377.5
+offset_bottom = 97.000015
+scale = Vector2(2.5, 2.5)
+max_value = 360.0
 rounded = true
 custom_arrow_step = 10.0
 

@@ -26,7 +26,7 @@ public partial class Loader : CanvasLayer
 		// Warp to new scene
 		if (_targetScene != null)
 		{
-			WarpManager.Instance.WarpToPacked(_targetScene, null, Voronoi.Uncover().Angle(270).Ease(Tween.EaseType.Out));
+			WarpManager.Instance.WarpToPacked(_targetScene, null, Voronoi.Uncover().Color(Colors.CornflowerBlue).Angle(270).Ease(Tween.EaseType.Out));
 			_targetScene = null;
 		}
 	}

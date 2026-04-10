@@ -86,7 +86,7 @@ public partial class Scene1 : Node2D
 		VoronoiButton.Pressed += () => WarpManager.Instance.WarpToPacked(TargetScene, Voronoi.Cover(Duration).Color(OverlayColor).Image(OverlayImage).Angle(VoronoiAngle), Voronoi.Uncover(Duration).Color(OverlayColor).Image(OverlayImage).Angle(VoronoiAngle + 180));
 		PixellateButton.Pressed += () => WarpManager.Instance.WarpToPacked(TargetScene, Pixellate.Cover(Duration).Color(OverlayColor).Image(OverlayImage).Amount(PixelAmount), Pixellate.Uncover(Duration).Color(OverlayColor).Image(OverlayImage).Amount(PixelAmount));
 		DissolveButton.Pressed += () => WarpManager.Instance.WarpToPacked(TargetScene, Dissolve.Cover(Duration).Color(OverlayColor).Image(OverlayImage).Pattern(DissolveTexture).Feather(FeatherAmount), Dissolve.Uncover(Duration).Color(OverlayColor).Image(OverlayImage).Pattern(DissolveTexture).Feather(FeatherAmount).Invert());
-		LoaderButton.Pressed += () => WarpManager.Instance.WarpToPacked(LoaderScene, Dissolve.Cover(3f).Pattern(p => p.TileReveal).Feather(.1f).Ease(Tween.EaseType.InOut).Curve(Tween.TransitionType.Sine), null);
+		LoaderButton.Pressed += () => WarpManager.Instance.WarpToPacked(LoaderScene, Dissolve.Cover(3f).Color(Colors.CornflowerBlue).Pattern(p => p.TileReveal).Feather(.1f).Ease(Tween.EaseType.InOut).Curve(Tween.TransitionType.Sine), null);
 	}
 
 	public override void _Process(double delta)
