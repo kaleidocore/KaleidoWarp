@@ -187,7 +187,7 @@ Pixellate.Uncover(3f).Amount(70f).Origin(new(1,1));
 ## Dissolve transition
 
 Dissolve transitions enable transition animations through the use of dissolve textures. A dissolve texture is just a grayscale image that the shader will sample from and use as a mask when rendering the transition color/image overlay. It starts with the dissolve color threshold set to fully black, gradually increasing it to fully white across the transition duration. At any given point in time, transition overlay pixels will only be drawn if the corresponding pixel in the dissolve texture is below the current threshold. This can effectively create infinite variations of transition animations.
-The addon ships with a bunch of default dissolve textures (some stolen from [http://github.com/sempitern0](https://github.com/sempitern0/warp)) and made accessible via the `DefaultPatterns` class, but you can also provide your own Texture2D or resource path.
+The addon ships with a bunch of default dissolve textures (some stolen from [http://github.com/sempitern0](https://github.com/sempitern0/warp)) and made accessible via the `DefaultPatterns` class, but you can also provide your own Texture2D or resource path. The examples provide [PatternGenerator.cs](https://github.com/kaleidocore/KaleidoWarp/blob/main/Examples/PatternGenerator.cs) as a reference for creating some basic mathematical patterns but you can use any third party imaging software for more advanced patterns.
 
 The `Dissolve` transition adds the following properties:
 ```csharp
