@@ -58,7 +58,7 @@ public void WarpToNode(Node sceneNode, Transition? transitionOut, Transition? tr
 
 ## Transitions
 
-The addon comes with 5 built-in, shader based transition styles, each individually configurable:
+The addon (currently) comes with the following built-in, shader based transition styles, each further and individually configurable:
 
 | Transition class | Description |
 |------------|-------------|
@@ -69,7 +69,10 @@ The addon comes with 5 built-in, shader based transition styles, each individual
 | `Pixellation` | A pixellating effect reminiscent of the classic Super Mario pixel fade |
 | `Dissolve` | Uses a grayscale pattern texture to define when and where each screen pixel is overlaid and blended |
 
-*You can mix and match transition styles* for outro/intro however you like - as long as both of them have the same base color and image they should overlap seamlessly.
+I intend to keep adding new transition styles over time, so be sure to check back for updates.
+
+> ***You can mix and match transition styles*** for outro/intro however you like - as long as both of them have the same base color and image they should overlap seamlessly.
+
 Should this somehow not cover your needs you are free to implement your own custom transitions inherited from `Transition` (`Transition.tscn`), which handles most of the groundwork. And don't forget to share them here!
 
 
@@ -85,7 +88,7 @@ public static T Cover(float duration);
 public static T Uncover(float duration);
 ```
 
-The factories are primarily for convencience and the main difference between `Cover()` and `Uncover()` is that the latter initializes the transition to play in reverse.
+These factories are primarily for convencience and the main difference between `Cover()` and `Uncover()` is that the latter initializes the transition to play in reverse.
 
 ## Transition common base API
 
@@ -236,6 +239,9 @@ WarpManager.Instance.WarpToFile("res://menu.tscn", ColorFade.Cover(1f), ColorFad
 
 ## Custom loaders
 For smooth loading of heavy scenes you may want to create a custom loader. However, under this framework loader scenes are nothing special; just transition (warp) to your loader scene normally, load your target scene however you want and finally transition (warp) to it when ready. The example project demonstrates this pattern.
+
+## Rawdogging the shaders
+The intended purpose of this addon is to provide a high-level, clean, typesafe C# API to an ever-expanding collection of interchangeable transition shaders, while also relieving you of dummy ColorRects, boiler plate tweens and other repetitive work typically required for scene transitions. If, for some outlandish reason, you'd rather take the hard route you are of course free to slap these shaders onto whatever material you like. The shaders themselves too have been uniformly shaped in order to provide a shared, extensible API with common uniforms such as `progress`, `image`, `image_fit`, etc.
 
 ## Issues
 If you have any issues, suggestions or feature requests, just report them as usual in the [issues](https://github.com/kaleidocore/KaleidoWarp/issues).
