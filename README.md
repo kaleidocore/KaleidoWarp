@@ -76,7 +76,7 @@ I intend to keep adding new transition styles over time, so be sure to check bac
 Should this somehow not cover your needs you are free to implement your own custom transitions inherited from `Transition` (`Transition.tscn`), which handles most of the groundwork. And don't forget to share them here!
 
 
-## Configuring Transitions 🎭
+## Defining Transitions 🎭
 
 All transitions implement the following two static factory methods:
 
@@ -135,8 +135,8 @@ This transition slides the scene in a given direction, replacing it with the col
 The `Slide` transition adds the following properties:
 ```csharp
 transition
-    .Direction(Direction.Right)    // The direction of the slide
-    .Sticky(true);                 // Whether the overlay also slides or stays fixed, i.e. "glued to the screen".
+    .Direction(Direction.Left)    // The direction of the slide
+    .Sticky(false);               // Whether the overlay also slides or stays fixed, i.e. "glued to the screen".
 ```
 
 Examples:
