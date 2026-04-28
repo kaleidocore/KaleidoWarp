@@ -53,6 +53,7 @@ The primary API of the `WarpManager` class mirrors Godot's default scene navigat
 public void WarpToFile(string scenePath, Transition? transitionOut, Transition? transitionIn)
 public void WarpToPacked(PackedScene packedScene, Transition? transitionOut, Transition? transitionIn)
 public void WarpToNode(Node sceneNode, Transition? transitionOut, Transition? transitionIn)
+public void WarpToReload(Transition? transitionOut, Transition? transitionIn)
 ```
 
 
